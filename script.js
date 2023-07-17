@@ -2,7 +2,7 @@
 $(document).ready(onReady);
 
 // establish a place to store employee annual Salary information
-let employeeSalary = 0
+let employeeSalary = [];
 
 function onReady() {
   console.log('jQuery still works! What a gosh darn relief.');
@@ -50,17 +50,33 @@ function handleSubmit(event) {
   $("#employeeID").val("")
   $("#jobTitle").val("")
   $("#annualSalary").val("")
+
+    // create formula that pushes # to employeeSalary
+let employeeMonthlySalary = Number(annualSalaryText)/12;
+if (employeeMonthlySalary > 0){
+    employeeSalary.push(employeeMonthlySalary)
+    console.log(employeeMonthlySalary)
 }
+
+let totalMonthly = 0;
+// create formula that adds up array of employeeSalary
+for (let i = 0; i < employeeSalary.length; i++){
+    totalMonthly += parseInt(employeeSalary[i]);
+} if (totalMonthly > 12000){
+    let overBudget = document.querySelector("#totalFunds");
+    overBudget.style.backgroundColor = "Red" ;
+}
+let DollartotalMonthly = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD',}).format(totalMonthly);
+console.log(DollartotalMonthly)
+// Display salary total in total monthly
+$('#totalFunds').text(DollartotalMonthly)
+
+}
+
+
+
 //Function removes employee information from table
 function deleteEmployee (){
   // console.log('In deleteEmployee')
   $(this).parent().parent().remove()
 }
-
-//Function that calcs employee monthly income and than adds all to get total monthly expenses
-// function totalMonthly (event){
-//   event.preventDefault();
-// const annualSalaryInput = $('#annualSalary').append();
-// console.log('annualSalary text:', annualSalaryInput)
-// }
-

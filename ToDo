@@ -16,8 +16,8 @@
     1. Create 'listener' for submit button: DONE ✅
     2. Create 'listener' for delete buttons: DONE ✅
     3. Create function that takes form submitted information and displays it in the table: DONE ✅ 
-    4. Create function that calcs each employees monthly salary and then adds these values together: In progress ⏳
+    4. Create function that calcs each employees monthly salary and then adds these values together: In progress: DONE FINALLY!! ✅
         - If conditional should be created in function to create option to change background to red if value is above $12,000
 Steps to create function that calcs Monthly Total:
 1. create a function that pulls submitted information for salary and converts string to number
-2. access this information and divide value by 12 to create a new variable of 'employeeMonthlyIncome', then have the function add all of these new variables to return the sum and have it display
+2. access this information and divide value by 12 to create a new variable, then have the function add all of these new variables to return the sum and have it display
