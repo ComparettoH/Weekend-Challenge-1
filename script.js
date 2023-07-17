@@ -1,10 +1,14 @@
 
 $(document).ready(onReady);
+
+// establish a place to store employee annual Salary information
+let employeeSalary = 0
+
 function onReady() {
   console.log('jQuery still works! What a gosh darn relief.');
   // Handlers
   $("#submitButton").on('click', handleSubmit)
-  $("#submitButton").on('click', totalMonthly)
+//   $("#submitButton").on('click', totalMonthly)
   $("#table-body").on('click', '.deleteButton', deleteEmployee);
 }
 
@@ -39,6 +43,7 @@ function handleSubmit(event) {
     <td><button class="deleteButton">🗑️ Delete</button></td>
     </tr>
   `)
+
   // clears form by setting value to empty string
   $("#firstName").val("")
   $("#lastName").val("")
@@ -51,12 +56,11 @@ function deleteEmployee (){
   // console.log('In deleteEmployee')
   $(this).parent().parent().remove()
 }
-// establish a place to store employee annual Salary information
-let monthlySalary = 0
+
 //Function that calcs employee monthly income and than adds all to get total monthly expenses
-function totalMonthly (event){
-  event.preventDefault();
-const annualSalaryInput = $('#annualSalary').val();
-console.log(annualSalaryInput.text)
-}
+// function totalMonthly (event){
+//   event.preventDefault();
+// const annualSalaryInput = $('#annualSalary').append();
+// console.log('annualSalary text:', annualSalaryInput)
+// }
 
