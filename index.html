@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="jquery.js"></script>
+  <script src="script.js"></script>
+  <!-- Css Link -->
+  <link href="stylesheet.css" rel="stylesheet" />
+  <title>jQuery App</title>
 </head>
 <body>
-    
+  <header>
+    <h1>Salary Calculator</h1>
+  </header>
+  <br>
+  <main>
+    <section>
+      <h3>Add Employee</h3>
+      <form>
+        <input id="firstName" placeholder="First Name" type="text">
+        <input id="lastName" placeholder="Last Name" type="text">
+        <input id="employeeID" placeholder="ID" type="number">
+        <input id="jobTitle" placeholder="Title" type="text">
+        <input id="annualSalary" placeholder="Annual Salary" type="number">
+        <button id="submitButton">Submit</button>
+      </form>
+    </section>
+    <br>
+    <section>
+    <h3>Employees:</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Annual Salary</th>
+          <th>Clear</th>
+        </tr>
+    </thead>
+    <tbody id="table-body">
+      <!-- area that form information generates on DOM -->
+    </tbody>
+    </table>
+    </section>
+    <br>
+    <section>
+      <h3>Total Monthly:</h3>
+      <span id="totalFunds">0</span>
+    </section>
+    </main>
 </body>
 </html>

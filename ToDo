@@ -1,0 +1,23 @@
+
+- Create Css file and link to HTML file: DONE ✅
+    -Use past assignment/examples for a beginning styling template: Adjustments can be made later to further determine 
+- console.log test to ensure all files are linked, displaying, and working as intended before moving forward!!: DONE ✅
+- Update HTML file code to more closely reflect the example display:
+    Required Items are
+    1. Header listing 'Salary Calculator': DONE ✅
+    2. Add Employee form that has 5 'fill in' boxes AND a submit button: DONE ✅
+        5 Data sections are firstName, lastName, ID, Title, and Annual Salary
+    3. Header listing 'Employees': DONE ✅
+    4. Create a table that stores/displays all information submitted by employee form: DONE ✅
+    5. Create a delete button element in column of table so that employee can be removed from DOM if button is pressed: DONE ✅
+    6. A section below everything else that displays the total Employees monthly income: In progress ⏳
+        - Will look like Header listing 'Total Monthly:' and a box element that displays the results of calc function
+- Update Script.js to have the following Required Items:
+    1. Create 'listener' for submit button: DONE ✅
+    2. Create 'listener' for delete buttons: DONE ✅
+    3. Create function that takes form submitted information and displays it in the table: DONE ✅ 
+    4. Create function that calcs each employees monthly salary and then adds these values together: In progress ⏳
+        - If conditional should be created in function to create option to change background to red if value is above $12,000
+Steps to create function that calcs Monthly Total:
+1. create a function that pulls submitted information for salary and converts string to number
+2. access this information and divide value by 12 to create a new variable of 'employeeMonthlyIncome', then have the function add all of these new variables to return the sum and have it display
